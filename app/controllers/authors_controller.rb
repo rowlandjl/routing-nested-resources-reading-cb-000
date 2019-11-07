@@ -9,5 +9,8 @@ class AuthorsController < ApplicationController
     @posts = @author.posts 
     render template: 'posts/index'
   end 
+  
+  def post 
+    @author = Author.find(params[:id])
 
 end
